@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>芊絨 & 詩芹：來自未來的我們 ✉️</title>
+  <style>
+    @import url('https://fonts.googleapis.com/earlyaccess/notosanstc.css');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+      background-image: url('https://images.unsplash.com/photo-1573547429440-0c3cebb4de74?auto=format&fit=crop&w=1950&q=80');
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      color: #fff;
+      padding: 20px;
+      backdrop-filter: brightness(60%) blur(2px);
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    }
+    h1 {
+      font-size: 2em;
+      font-weight: bold;
+      margin-bottom: 15px;
+      color: #ffcccb;
+    }
+    .time {
+      font-size: 0.9em;
+      margin-bottom: 20px;
+      color: #ddd;
+    }
+    .card {
+      margin-bottom: 30px;
+    }
+    h2 {
+      color: #add8e6;
+      font-size: 1.4em;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    p {
+      line-height: 1.8;
+      font-size: 1em;
+      color: #f1f1f1;
+    }
+    audio {
+      margin-top: 20px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>芊絨 & 詩芹：來自未來的我們 ✉️</h1>
+    <div class="time" id="timeDisplay">Loading times...</div>
+
+    <div class="card">
+      <h2>🧭 四月出發：這段新旅程的開始</h2>
+      <p>
+        台灣這兩天剛好轉晴，有點像是我們的祝福偷偷搭飛機跟你們去了。<br/>
+        如果你在路上聞到九層塔或聽到有人喊「欸欸幫我買豆漿」，那是幻覺，是我們的牽掛（誤）！<br/>
+        想問你們在清邁第一餐吃什麼？有沒有迷路？還是被帥哥搭話了？要拍照喔～台灣這邊會想你們的。
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>🫖 八月仲夏：生活穩定了嗎？</h2>
+      <p>
+        八月的台灣，熱到路人都在便利商店逗留一小時，應該說是一種「全民避暑文化」。<br/>
+        你們在那邊還好嗎？開始習慣教學節奏了嗎？如果哪天忽然想家了，就想像我們拿著珍奶坐在你對面說廢話吧。<br/>
+        還有還有，有沒有開始偷偷學泰文？聽說泰式奶茶很甜，但我們的友情比較甜（咳）。
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>🌅 三月歸期：倒數的風景</h2>
+      <p>
+        清邁的最後一段路應該會特別捨不得吧，像每次回台南離開前總要再吃一次米糕。<br/>
+        我們真的好想再一起吃飯、散步、講垃圾話。到時你們回來，一定要有一場「感人到笑場」的回歸聚會喔！<br/>
+        如果你們在那邊交了男友，不准比我們好笑（開玩笑），但要記得把幸福也帶回來！
+      </p>
+    </div>
+
+    <audio controls autoplay loop>
+      <source src="https://upload.wikimedia.org/wikipedia/commons/transcoded/e/e3/Lofi_song_-_Vishmak_%26_Nitesh_Chhabra_%28Jamendo%29.ogg/Lofi_song_-_Vishmak_%26_Nitesh_Chhabra_%28Jamendo%29.ogg.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+
+  <script>
+    function updateTime() {
+      const taiwanTime = new Date().toLocaleString("en-US", { timeZone: "Asia/Taipei", hour12: false });
+      const chiangMaiTime = new Date().toLocaleString("en-US", { timeZone: "Asia/Bangkok", hour12: false });
+      document.getElementById("timeDisplay").innerHTML =
+        `🇹🇼 台灣時間：${taiwanTime}<br/>🇹🇭 清邁時間：${chiangMaiTime}`;
+    }
+    setInterval(updateTime, 1000);
+    updateTime();
+  </script>
+</body>
+</html>
